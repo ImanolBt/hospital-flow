@@ -30,7 +30,6 @@ function Estadisticas({ pacientes, recursos }) {
 
   // Calcular recursos disponibles vs ocupados
   const recursosDisponibles = recursos.filter(r => r.disponible).length;
-  const recursosOcupados = recursos.filter(r => !r.disponible).length;
 
 
 
