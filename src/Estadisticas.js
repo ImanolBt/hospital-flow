@@ -32,10 +32,7 @@ function Estadisticas({ pacientes, recursos }) {
   const recursosDisponibles = recursos.filter(r => r.disponible).length;
   const recursosOcupados = recursos.filter(r => !r.disponible).length;
 
-  const datosRecursos = [
-    { name: 'Disponibles', value: recursosDisponibles },
-    { name: 'Ocupados', value: recursosOcupados }
-  ];
+
 
   // Calcular tiempo promedio de espera (simulado por ahora)
   const tiempoPromedioEspera = pacientes.length > 0 

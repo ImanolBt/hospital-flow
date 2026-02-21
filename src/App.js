@@ -59,11 +59,11 @@ function App() {
   const agregarPaciente = async (e) => {
     e.preventDefault();
     
-    const { data, error } = await supabase
-      .from('pacientes')
-      .insert([
-        { nombre, edad: parseInt(edad), area, prioridad, estado: 'esperando' }
-      ]);
+    const { error } = await supabase
+  .from('pacientes')
+  .insert([
+    { nombre, edad: parseInt(edad), area, prioridad, estado: 'esperando' }
+  ]);
 
     if (error) {
       alert('Error al agregar paciente');
